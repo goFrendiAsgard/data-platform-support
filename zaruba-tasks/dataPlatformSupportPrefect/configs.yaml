@@ -1,0 +1,15 @@
+configs:
+
+  dataPlatformSupportPrefect:
+    runInLocal: '{{ .GetValue "runDataPlatformSupportPrefectInLocal" }}'
+    ports: |
+      {{ .GetEnv "PREFECT_HASURA_HOST_PORT" }}
+      {{ .GetEnv "PREFECT_APOLLO_PORT" }}
+      {{ .GetEnv "PREFECT_UI_PORT" }}
+    afterCheck: sleep 5
+    checkCommand: |
+      echo "check dataPlatformSupportPrefect"
+
+  dataPlatformSupportPrefectImage:
+    useImagePrefix: true
+    imageName: data-platform-support-prefect

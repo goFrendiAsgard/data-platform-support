@@ -1,0 +1,10 @@
+tasks:
+
+  registerDataPlatformSupportPrefectFlows:
+    icon: 🐶
+    extend: zrbRunShellScript
+    location: ../../data-platform-supportPrefect/deployments
+    configRef: registerDataPlatformSupportPrefectFlows
+    envRef: registerDataPlatformSupportPrefectFlows
+    maxStartRetry: 5
+    startRetryDelay: 10s

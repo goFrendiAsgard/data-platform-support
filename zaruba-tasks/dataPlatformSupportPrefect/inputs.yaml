@@ -1,0 +1,8 @@
+inputs:
+
+  runDataPlatformSupportPrefectInLocal:
+    default: true
+    options: [true, false]
+    allowCustom: false
+    description: Whether to run dataPlatformSupportPrefect locally
+    prompt: Run dataPlatformSupportPrefect locally?

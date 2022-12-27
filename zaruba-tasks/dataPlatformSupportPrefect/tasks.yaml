@@ -1,0 +1,11 @@
+tasks:
+
+  startDataPlatformSupportPrefect:
+    icon: 💯
+    dependencies:
+      - startDataPlatformSupportPrefectContainer
+
+  stopDataPlatformSupportPrefect:
+    icon: ✋
+    dependencies:
+      - stopDataPlatformSupportPrefectContainer

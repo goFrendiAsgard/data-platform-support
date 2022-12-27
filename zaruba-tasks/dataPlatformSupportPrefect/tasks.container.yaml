@@ -1,0 +1,47 @@
+tasks:
+
+  startDataPlatformSupportPrefectContainer:
+    icon: 💯
+    extend: zrbStartDockerCompose
+    location: ../../data-platform-supportPrefect
+    inputs:
+      - runDataPlatformSupportPrefectInLocal
+    configRefs:
+      - dataPlatformSupportPrefect
+      - dataPlatformSupportPrefectImage
+    envRefs: 
+      - dataPlatformSupportPrefect
+  
+  buildDataPlatformSupportPrefectImage:
+    icon: 🏭
+    extend: zrbBuildDockerCompose
+    location: ../../data-platform-supportPrefect
+    configRefs: 
+      - dataPlatformSupportPrefectImage
+    envRefs: 
+      - dataPlatformSupportPrefect
+
+  pushDataPlatformSupportPrefectImage:
+    icon: 📤
+    extend: zrbPushDockerCompose
+    location: ../../data-platform-supportPrefect
+    dependencies:
+      - buildDataPlatformSupportPrefectImage
+    configRefs: 
+      - dataPlatformSupportPrefectImage
+    envRefs: 
+      - dataPlatformSupportPrefect
+
+  stopDataPlatformSupportPrefectContainer:
+    icon: ✋
+    extend: zrbStopDockerCompose
+    location: ../../data-platform-supportPrefect
+    envRefs: 
+      - dataPlatformSupportPrefect
+
+  removeDataPlatformSupportPrefectContainer:
+    icon: ❌
+    extend: zrbRemoveDockerCompose
+    location: ../../data-platform-supportPrefect
+    envRefs: 
+      - dataPlatformSupportPrefect

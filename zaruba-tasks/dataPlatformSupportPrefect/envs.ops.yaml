@@ -1,0 +1,7 @@
+envs:
+
+  registerDataPlatformSupportPrefectFlows:
+    PREFECT_API_URL:
+      from: REGISTER_DATA_PLATFORM_SUPPORT_PREFECT_FLOWS_PREFECT_API_URL
+      default: http://localhost:4200/api
+
